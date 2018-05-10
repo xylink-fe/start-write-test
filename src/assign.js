@@ -6,7 +6,11 @@
  * @returns {Object}
  */
 function assign(target, soucres) {
-  // add your code here
+  if (Object.prototype.toString.call(target) !== "[object Object]") {
+    return "Not a object";
+  }
+
+  return Object.assign({}, target, soucres);
 }
 
 module.exports = assign;
