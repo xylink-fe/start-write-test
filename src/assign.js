@@ -7,6 +7,13 @@
  */
 function assign(target, soucres) {
   // add your code here
+  if(Array.isArray(soucres)){
+    soucres.forEach(function(item){
+      target = Object.assign(target, item);
+    });
+    return target;
+  }
+  return Object.assign(target, soucres);
 }
 
 module.exports = assign;
